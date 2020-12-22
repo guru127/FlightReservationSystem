@@ -26,14 +26,4 @@ public class Flight {
     public  void icrementBookingCounter(){
     this.bookedSeats++;
     }
-
-    @Override
-    public String toString() {
-        return "Flight{" +
-                "flightNumber='" + flightNumber + '\'' +
-                ", airline='" + airline + '\'' +
-                ", capacity=" + capacity +
-                ", bookedSeats=" + bookedSeats +
-                '}';
-    }
 }

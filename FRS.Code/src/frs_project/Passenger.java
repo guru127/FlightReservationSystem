@@ -2,9 +2,8 @@ package frs_project;
 
 public class Passenger {
  private static int idcounter=0;
- private  int id;
-
-
+ private int id;
+          //creating address class
     private static class Address{
        private String street;
        private String city;
@@ -16,6 +15,7 @@ public class Passenger {
            this.state=state;
        }
    }
+     // creating conctact class
    private  static class Contact{
        private String name;
        private String phone;
@@ -30,8 +30,8 @@ public class Passenger {
 
     private Address address;
     private Contact contact;
-
-   public Passenger(int id, String street,String city,String state,String name, String phone , String email){
+          // constructer for passenger
+   public Passenger( String street,String city,String state,String name, String phone , String email){
       this.id = ++idcounter;
       this.address=new Address(street, city,state);
       this.contact=new Contact(name,phone,email);
@@ -45,16 +45,8 @@ public class Passenger {
     public  String getContactDetails(){
        return "name: "+contact.name+", phone:"+contact.phone+", email: "+contact.email;
     }
-    public static int getIdcounter(){
+    public static int getPassengercount(){
        return idcounter;
     }
 
-    @Override
-    public String toString() {
-        return "Passenger{" +
-                "id=" + id +
-                ", address=" + address +
-                ", contact=" + contact +
-                '}';
-    }
 }
